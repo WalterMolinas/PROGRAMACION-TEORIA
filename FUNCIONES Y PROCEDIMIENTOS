@@ -1,0 +1,135 @@
+CONCEPTO DE FUNCION:
+
+Una FUNCIÓN es un subprograma que realiza una tarea determinada y bien
+acotada a la cual le pasamos datos y nos devuelve datos. Esta función se ejecuta
+cuando se lo llama (llamada a la función)
+
+Ventajas:
+• El programa es mas simple de comprender ya que cada módulo se dedica a realizar
+una tarea en particular.
+• La depuración queda acotada a cada módulo.
+• Las modificaciones al programa se reducen a modificar determinados módulos.
+• Cuando cada módulo esta bien probado se lo puede usar las veces que sea necesario
+sin volver a revisarlo.
+• Se obtiene una independencia del código en cada módulo.
+
+MODULARIDAD-COHESION Y ACOPLAMIENTO:
+
+MODULARIDAD:
+• Para resolver un problema complejo de desarrollo de software,
+conviene separarlo en partes más pequeñas, que se puedan diseñar,
+desarrollar, probar y modificar, de manera sencilla y lo más
+independientemente posible del resto de la aplicación.
+•Esas partes, cuando se quiere usar un nombre genérico, habitualmente
+se denominan módulos.
+• En programación estructurada se modulariza la solución, el “cómo” del
+desarrollo.
+
+COHESION:
+La cohesión se refiere a que cada módulo del sistema se refiera a
+un único proceso o entidad.
+• A mayor cohesión, mejor: el módulo en cuestión será más sencillo de diseñar,
+programar, probar y mantener.
+•En el diseño estructurado, se logra alta cohesión cuando cada módulo
+(función o procedimiento) realiza una única tarea trabajando sobre una sola
+estructura de datos.
+• Un test que se suele hacer a los módulos funcionales para ver si son cohesivos
+es analizar que puedan describirse con una oración simple, con un solo
+verbo activo. Si hay más de un verbo activo en la descripción del
+procedimiento o función, deberíamos analizar su partición en más de un
+módulo, y volver a hacer el test.
+
+ACOPLAMIENTO:
+•El acoplamiento mide el grado de relacionamiento de un
+módulo con los demás.
+•A menor acoplamiento, mejor: el módulo en cuestión será más
+sencillo de diseñar, programar, probar y mantener.
+•En el diseño estructurado, se logra bajo acoplamiento reduciendo
+las interacciones entre procedimientos y funciones, reduciendo la
+cantidad y complejidad de los parámetros y disminuyendo al
+mínimo los parámetros por referencia y los efectos colaterales
+
+CARACTERISTICAS DE LAS FUNCIONES EN C:
+• Una de estas funciones tiene que llamarse main.
+• La ejecución del programa siempre comenzará por las instrucciones contenidas
+en main.
+• Se pueden subordinar funciones adicionales a main, y posiblemente unas a
+otras.
+• Si un programa contiene varias funciones, sus definiciones pueden aparecer en
+cualquier orden, pero deben ser independientes unas de otras. Esto es, una
+definición de una función no puede estar incluida en otra.
+• Cuando se accede a una función desde alguna determinada parte del programa
+(cuando se «llama» a una función), se ejecutan las instrucciones de que consta.
+Se puede acceder a una misma función desde varios lugares distintos del
+programa.
+• Una vez que se ha completado la ejecución de una función, se devuelve el
+control al punto desde el que se accedió a ella. Generalmente, una función
+procesará la información que le es pasada desde el punto del programa en
+donde se accede a ella y devolverá un solo valor.
+• La información se le pasa a la función mediante unos identificadores
+especiales llamados argumentos (también denominados parámetros) y es
+devuelta por medio de la instrucción return.
+• Sin embargo, algunas funciones aceptan información pero no devuelven nada
+(por ejemplo, la función de biblioteca printf), mientras que otras funciones (la
+función de biblioteca s canf) devuelven varios valores.
+
+TIPOS DE FUNCIONES:
+
+Funciones Predefinidas:
+• Están definidas en el lenguaje de programación y pueden ser
+utilizadas directamente. Ej. POW
+Funciones definidas por el usuario :
+•Utilizadas cuando las funciones predefinidas no permiten realizar el
+tipo de cálculo deseado, y es el usuario el que debe implementar,
+mediante estructuras de control adecuadas, la tarea a realizar.
+Ejemplo: la función strlen, que a partir de una cadena de caracteres
+que recibe como parámetro de entrada calcula un valor, que es la
+longitud de esa cadena
+
+PROCEDIMIENTOS:
+
+En el lenguaje C no se habla habitualmente de procedimientos, sino
+sólo de funciones. Pero existen de las dos tipos.
+Procedimientos serían, por ejemplo, la función printf no se invoca para
+calcular valores nuevos, sino para realizar una tarea sobre las variables.
+En C se usa una función de tipo void para realizar un procedimiento.
+Una función tipo void no necesariamente tendrá la sentencia return. Si
+una función de tipo void hace uso de sentencias return, entonces en
+ningún caso debe seguir a esa palabra valor alguno: si así fuera, el
+compilador detectará un error y no compilará el programa.
+
+RETURN:
+
+• Si la función es de un tipo de dato distinto de void, entonces en el bloque de la función
+debe escribirse, al menos, una sentencia return. A continuación de la palabra return,
+deberá ir el valor que devuelve la función:, siempre del mismo tipo al tipo de la
+función .
+Fuerza la salida inmediata del cuerpo de la función y se vuelve a la siguiente sentencia
+después de la llamada.
+La forma general de la sentencia return es:
+return [expresión];
+Si el tipo de dato de la expresión del return no coincide con el tipo de la función
+entonces, de forma automática, el tipo de dato de la expresión se convierte en el tipo
+de dato de la función.
+
+VARIABLES LOCALES Y GLOBALES:
+LOCALES:Todas las variables que se encuentren definidas dentro de las
+llaves de una función (recuerde que main también es una función)
+tienen validez dentro de dicha función y se llaman VARIABLES
+LOCALES.
+GLOBALES:Ahora si una variable puede ser usada desde cualquier función y
+durante el transcurso de todo el programa, esa es una VARIABLE
+GLOBAL. Las variables globales de definen fuera de cualquier
+función , normalmente debajo de los include que se colocan al
+comienzo del programa.
+
+PASAJES POR PARAMETROS POR VALOR Y POR REFERENCIA.
+
+PASAJE POR VALOR: Se llama pasaje por valor cuando a la función se le pasa como
+parámetro actual el valor de la variable.
+
+PASAJE POR REFERENCIA: Se llama pasaje por referencia cuando a la función se le pasa
+como parámetro actual la dirección de memoria de una
+variable. Tenga en cuenta que en este caso la variable que
+recibe deber ser un puntero , ya que lo que se esta pasando es
+una dirección de memoria.
