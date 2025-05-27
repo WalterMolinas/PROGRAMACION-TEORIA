@@ -1,0 +1,26 @@
+CADENAS O STRINGS
+Las cadenas están definidas como una secuencia de caracteres.
+
+Una cadena es un conjunto de caracteres, o valores de tipo
+char, terminados con el carácter nulo, es decir el valor
+numérico 0.
+
+DECLARACION DE UNA CADENA O STRING.
+Cuando se declara un arreglo de caracteres se debe considerar un
+carácter adicional a la cadena más larga que se vaya a guardar. Por
+ejemplo, si se quiere declarar un arreglo cadena que guarde una
+cadena de diez caracteres, se hará como:
+
+char <identificador> [<longitud máxima>];
+char cadena[11];
+La terminación de la cadena se debe indicar con nulo. Un nulo se
+especifica como '\0'.
+
+Se pueden hacer también inicializaciones de arreglos de caracteres en
+donde automáticamente C asigna el caracter nulo al final de la cadena, de la
+siguiente forma:
+
+char nombre_arr[ tam ]="cadena";
+Por ejemplo, el siguiente fragmento inicializa cadena con ``hola'':
+char cadena[5]="hola"; El código anterior es equivalente a:
+char cadena[5]={'h','o','l','a','\0'};
