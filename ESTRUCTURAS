@@ -1,0 +1,20 @@
+ESTRUCTURA DE REGISTRO (LISTAS):
+Una estructura o registro es una estructura de datos
+que agrupa variables que pueden tener tipos
+diferentes.
+Cada componente de un registro se conoce como
+campo o miembro.
+Los componentes de la estructura se declaran dentro de ella, cada uno
+con su tipo y nombre de variable, los tipos pueden ser diferentes.
+El nombre (tiponuevo) de la estructura se considera como un tipo, no
+una variable.
+
+OPERACIONES CON  ARREGLOS DE ESTRUCTURAS:
+•Cargar un arreglo de estructuras.
+•Recorrer un arreglo de estructuras.
+•Buscar un elemento en particular de estructuras.
+•Acceder a un elemento en una posición determinada.
+•Acceder a una posición determinada y mostrar su contenido.
+•Insertar un nuevo elemento.
+•Eliminar un elemento.
+•Ordenar un arreglo de estructuras.
