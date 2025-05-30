@@ -1,21 +1,11 @@
 CADENAS O STRINGS
-Las cadenas están definidas como una secuencia de caracteres.
-
-Una cadena es un conjunto de caracteres, o valores de tipo
-char, terminados con el carácter nulo, es decir el valor
-numérico 0.
-
-DECLARACION DE UNA CADENA O STRING.
-Cuando se declara un arreglo de caracteres se debe considerar un
-carácter adicional a la cadena más larga que se vaya a guardar. Por
-ejemplo, si se quiere declarar un arreglo cadena que guarde una
-cadena de diez caracteres, se hará como:
-
+  *Son secuencias de caracteres (char) terminadas con un carácter nulo ('\0', que es el valor 0).
+Declaración:
+	*Para guardar una cadena, se usa un arreglo de caracteres. Siempre se debe dejar un espacio extra para el '\0'.
 char <identificador> [<longitud máxima>];
 char cadena[11];
 La terminación de la cadena se debe indicar con nulo. Un nulo se
 especifica como '\0'.
-
 Se pueden hacer también inicializaciones de arreglos de caracteres en
 donde automáticamente C asigna el caracter nulo al final de la cadena, de la
 siguiente forma:
@@ -24,3 +14,11 @@ char nombre_arr[ tam ]="cadena";
 Por ejemplo, el siguiente fragmento inicializa cadena con ``hola'':
 char cadena[5]="hola"; El código anterior es equivalente a:
 char cadena[5]={'h','o','l','a','\0'};
+
+Funciones en String--->libreria <string.h>
+	*strlen(cadena):devuelve la longitud de la cadena (sin contar '\0').
+	*strcpy(destino, origen):copia una cadena en otra.
+	*strcat(destino, origen):agrega (concatena) una cadena al final de otra.
+	*strcmp(cad1, cad2):compara dos cadenas,devuelve 0 si son iguales, negativo si la primera es menor, positivo si es mayor.
+	*strchr(cadena,caracter):busca la primera aparicion de un caracter en la cadena.
+	*strstr(cadena,subcadena):busca la primera aparicion de un caracter en la cadena.
