@@ -1,42 +1,34 @@
 ORDENAMIENTO: 
-Es la operación de ordenar un arreglo en
-algún orden de acuerdo a un criterio de
-ordenamiento.
-
-Ordenamientos internos: Son aquellos en los que los valores a ordenar están
-en memoria principal, por lo que se asume que el tiempo que se requiere para
-acceder cualquier elemento sea el mismo (a [1], a [500], etc.).
-Ordenamientos externos: Son aquellos en los que los valores a ordenar están
-en memoria secundaria (disco, cinta, cilindro magnético, etc.), por lo que se
-asume que el tiempo que se requiere para acceder a cualquier elemento
-depende de la última posición accesada (posición 1, posición 500, etc.).
-
-Algoritmos de intercambio:
-En este tipo de algoritmos se toman los elementos de dos en dos, se comparan y
-se INTERCAMBIAN si no están en el orden adecuado. Este proceso se repite hasta
-que se ha analizado todo el conjunto de elementos y ya no hay intercambios.
-Entre estos algoritmosse encuentran el Burbuja (BubbleSort) y QuickSort
-
-Algoritmos de inserción:
-En este tipo de algoritmo los elementos que van a ser ordenados
-son considerados uno a la vez.
-Su funcionamiento consiste en el recorrido por la lista
-seleccionando en cada iteración un valor como clave y
-compararlo con el resto insertándolo en el lugar
-correspondiente.
-Entre estos algoritmos se encuentran el de Inserción Directa,
-ShellSort, Inserción Binaria y Hashing.
-
-Algoritmos de selección:
-En este tipo de algoritmos se SELECCIONA o se busca el elemento
-más pequeño (o más grande) de todo el conjunto de elementos y
-se coloca en su posición adecuada. Este proceso se repite para el
-resto de los elementos hasta que todos son analizados.
-Entre estos algoritmos se encuentra el de Selección Directa.
-
-Algoritmos de enumeración
-En este tipo de algoritmos cada elemento es comparado contra los
-demás. En la comparación se cuenta cuántos elementos son más
-pequeños que el elemento que se está analizando, generando así
-una “enumeración”. El número generado para cada elemento
-indicará su posición.
+	Es organizar un arreglo según un criterio (por ejemplo, de menor a mayor).
+	
+TIPOS SEGUN LA UBICACION DE DATOS:
+	*Interno:Los datos están en memoria principal. Acceso rápido a cualquier elemento.
+	*externos:están en memoria secundaria.Acceso lento, depende de la última posición accesada 
+	
+BURBUJA(BUBBLE SORT):
+	*Compara elementos adyacentes y los intercambia si están en el orden incorrecto. Repite hasta que todo esté ordenado.
+	for( int i=0;i<n;i++){
+	for(int j=0;j<n;j++){
+		if(arr[j]>arr[j+1]){
+			temp=arr[j];
+			arr[j]=arr[j+1];
+			arr[j+1]=temp;
+		}
+	}
+	
+}
+SELECCION(SELECTION SORT):
+		*Encuentra el mínimo en cada pasada y lo pone en su posición correcta.
+INSERCION(INSERCION SORT):
+		*Inserta cada elemento en su lugar correcto como si estuvieras ordenando cartas en la mano.
+		for(int i=0;i<n;i++){
+		temp=arr[i];
+		j=i-1;
+		while(j>=0 && arr[j]>temp){
+			arr[j+1]=arr[j];
+			j--;
+		}
+		arr[j+1]=temp;
+	}
+		
+		
